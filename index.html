@@ -270,13 +270,14 @@ function getCustomCommands(){
   const rows=document.querySelectorAll('#custom-commands > div');
   const result=[];
   rows.forEach(row=>{
-    const inputs=row.querySelectorAll('input');
-    const selects=row.querySelectorAll('select');
-    const action=inputs[0].value.trim();
-    const key=inputs[1].value.trim();
-    const platform=selects[0].value;
-    const type=selects[1].value;
-    if(action&&key) result.push({action,key,platform,type});
+const inputs=row.querySelectorAll('input[type="text"]');
+const selects=row.querySelectorAll('select');
+const numpad=row.querySelector('input[type="checkbox"]')?.checked||false;
+const action=inputs[0].value.trim();
+const key=inputs[1].value.trim();
+const platform=selects[0].value;
+const type=selects[1].value;
+if(action&&key) result.push({action,key,platform,type,numpad});
   });
   return result;
 }
