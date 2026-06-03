@@ -249,7 +249,7 @@ function addCustomCommand(){
   const id='custom-'+customCount++;
   const div=document.createElement('div');
   div.id=id;
-  div.style.cssText='background:var(--white-05);border:0.5px solid var(--white-10);border-radius:12px;padding:14px 16px;margin-bottom:10px;display:grid;grid-template-columns:1fr auto auto 1fr auto;gap:10px;align-items:center';
+  div.style.cssText='background:var(--white-05);border:0.5px solid var(--white-10);border-radius:12px;padding:14px 16px;margin-bottom:10px;display:grid;grid-template-columns:1fr auto auto auto auto;gap:10px;align-items:center';
   div.innerHTML=`
     <input type="text" placeholder="Action name (e.g. Strip Silence)" style="padding:8px 12px;font-family:'DM Sans',sans-serif;font-size:13px;background:var(--white-05);border:0.5px solid var(--white-10);border-radius:8px;color:var(--white);outline:none" />
     <select style="padding:8px 10px;font-family:'DM Sans',sans-serif;font-size:12px;background:#1a0a3a;border:0.5px solid var(--white-10);border-radius:8px;color:var(--white-60);outline:none;cursor:pointer">
